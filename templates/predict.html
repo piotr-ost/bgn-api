@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction</title>
+</head>
+<body>
+  <div>
+    <h1>Cards:</h1>
+    <img src="{{ url_for('static', filename=filename) }}" alt="Uploaded Image">
+    <div>
+      {% for card in cards %}
+      <h3>
+        {{ card }}
+      </h3>
+      {% endfor %}
+    </div>
+  </div>
+  <a href="{{ url_for('home') }}">Go back</a>
+</body>
+</html>
