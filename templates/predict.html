@@ -6,16 +6,12 @@
 </head>
 <body>
   <div>
-    <h1>Cards:</h1>
-    <img src="{{ url_for('static', filename=filename) }}" alt="Uploaded Image">
-    <div>
-      {% for card in cards %}
-      <h3>
-        {{ card }}
-      </h3>
-      {% endfor %}
-    </div>
+    <h1>TODO display bboxes here</h1>
+    <object src="{{ url_for('static', filename=filename) }}" 
+            type="application/pdf" style="min-height: 100vh; width: 100%">
+    </object>
   </div>
   <a href="{{ url_for('home') }}">Go back</a>
+  <a href="{{ url_for('translate') }}">Translate</a>
 </body>
 </html>
