@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Translation</title>
+</head>
+<body>
+  <div>
+    <div>
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+    <embed src="{{ url_for('static', filename=filename) }}" 
+           type="application/pdf" style="min-height: 100vh; width: 100%" />
+  </div>
+</body>
+</html>
