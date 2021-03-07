@@ -2,6 +2,7 @@ import os
 import numpy as np
 import pickle
 
+from googletrans import Translator
 from PIL import Image
 from cv2 import resize
 from pdf2image import convert_from_path
@@ -12,6 +13,32 @@ from easyocr import Reader
 
 app = Flask(__name__, static_folder='static')
 path = '../ocr-party/models'
+
+
+
+def four_points_to_bbox(four_points):
+    pass  # TODO 
+
+
+def box_to_bbox(box: list) -> list:
+    """
+    bbox is (left_x, top_y, right_x, bottom_y),
+    whereas box is (left, top, width, height)
+    """
+    left_x, top_y = box[0], box[1]
+    right_x = box[0] + box[2]
+    bottom_y = box[1] + box[3]
+    return [left_x, right_x, top_y, bottom_y]
+
+
+def translate(img, points, text, translator: Translator):
+    bbox = points_to_bbox(points)
+    x1, x2, y1, y2 = box_to_bbox(box)
+    cv2.rectangle(img, (x1, y1), (x2, y2), (255, 255, 255), -1)
+    translated = translator.translate(text, dest='en')
+    cv2.putText(img, translated.text, org=(x1, y1), font=cv2.FONT_HERSHEY_SIMPLEX,
+                color=(0, 0, 0)) # not sure if font size
+    return img 
 
 
 def allowed_file(filename):
@@ -48,11 +75,11 @@ def translate(filename):
         res = pickle.load(f)
     image = convert_from_path(filename)[0]
     image = np.array(image)
-    as_pil = Image.fromarray(image)
-    # TODO translate 
     # res = reader.readtext(image)
+    for bbox, confidence,   
     name = filename.split('.')[0]
     filename = name + '_translated.pdf' 
+    as_pil = Image.fromarray(image)
     as_pil.save('static/' + filename)
     return render_template('translate.html', filename=filename)
         
