@@ -1,15 +1,17 @@
 import os
+import numpy as np
+import pickle
 
 from cv2 import resize
 from pdf2image import convert_from_path
-from flask import Flask, request, redirect, url_for, render_template, flash
+from flask import Flask, request, redirect, url_for, render_template, flash, jsonify
 from werkzeug.utils import secure_filename
 from easyocr import Reader
 
 
 app = Flask(__name__, static_folder='uploads')
 path = '../ocr-party/models'
-reader = Reader(['en'], model_storage_directory=path, gpu=True)
+# reader = Reader(['pl'], model_storage_directory=path, gpu=True)
 
 
 def allowed_file(filename):
@@ -39,13 +41,16 @@ def home():
 def predict(filename):
     return render_template('predict.html', filename=filename)
 
+
+@app.route('/translate/<filename>')
 def translate(filename):
-    image = convert_from_path(filename)[0]
-    image = np.array(image)
-    if any(i > 3000 for i in image.shape):
-        image = resize(image, None, fx=0.5, fy=0.5)
-    res = reader.readtext(image)
-    return res
+    if False:
+        image = convert_from_path(filename)[0]
+        image = np.array(image)
+        res = reader.readtext(image)
+    with open('res.pkl', 'rb') as f:
+        res = pickle.loads(f)
+    return jsonify(res)
 
 if __name__ == '__main__':
-    app.run(port=8011, host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=True)
