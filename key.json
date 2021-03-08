@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "smart-altar-274709",
+  "private_key_id": "e3aa38422a9d5a3af181845573b2eb853dbecac8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCYRrLkRaKhH4qC\nK+2/KmqhZNU+ZZtNxPH0v7tCr0QvsPh04C6SVEs8fZAh9eKbpUvQClGE8jnqraB3\nfiWoYrO/uyucAEQaIj3UT7WEQbUg62UaAFURnceQv+FInib4M3shzbJpfbLFHa1X\n9LEE95ZY7LL5TckA1Iw706Gwe8D5Y2o8GyWY6cTRiT/Bnms3vilFQet6KGjhcDSz\ndCfCA2k5JzoBVun4wnxWREkrlfy213FhG3xnciLZOQPKSF7ORmbZ8+rVPBUhVVmT\nVkTzdwbyp/wTMlACvHBg1iYVtyoat+ICyVBHyxoyPqN5Sv3pAFs17QZF17TAuXjV\nZsFtspcLAgMBAAECggEADX6YB3i2uWnVJkU3hxOYNxmuq1GDANJT0ULu5ZfCOcO7\nt1ScOL8cAVrs25Jk9MwiOs6Fr0ig1bY+gtH81/F44nEQ1uNP8oAkU8NSLH7lZIRx\na9Hc60TwB/J1+xYUEZzMuNzEudDrRC9yfb/wGNn9sRjqbdBB4HJb9xVOV+VJRan+\ng4fpED7iVfudxjqCHC6XgrmyEiR5uYZEneBaeyRDY9sxa7cQF7+VM3hSkl6JYD75\np2qPXqgzekIYWKEg3TcQYCVdyazZWA1nNn4gWsyKY32D5oFcuFfhsF9Y5K42qkgY\nvW4yD9al7rkgkVYzCU9kGx/8B9i5WvJ0RLA1mFk1cQKBgQDNbXtPXFu2K+MEuyZG\nj6k0AAqo4coD1kdxv9Gmpxv8Pd/1cHcfcaEHLEWfHQJhjamFyXYS/rLofjHlSweK\n/lk7rrwF544WIzTlKH7wWEy20E2sOc95zvc7M+awCEqftWwtj9hZAsGEyrQ90MSQ\n8CaAL1iZng88Vgqpv4qcnRHwqQKBgQC9w30w+FCM+Tl9i/rbUsa/6ZN5DFwSvWwk\ni1ZSFiwjdj/wRiF3zPBrAYiwufVbeg6aNvjjdlMSFSxUg68rdfBKMOFut2rPf3S0\nLWOswgVU4m8k1hhVeGRUih224dERm29Ph5uyMmnsVm96ijoVJ1yQ0Y7YlcQG9IQx\naOaT9Ov2kwKBgH13P5fx5cW2ujnaf/8aoRI0cE5DURnU1t/fcxGhANOnitCh9u+K\ne/ogjQkoM5sXZZFjwSzKyMR8xsavc5Tt0dxE1WuZyEs3B4hqmlT66SfCw53L1S8l\nPBS5l0yuU72FleOh9lYu+7i6ASm8B0IqmqkxwaBZTB7iwjJ43RTYTeu5AoGBAKSz\nNEg5bSg981DtGmgbWxccMnwAZzV4pJC/QsdyKRMKQgpXxBqHjC9DoJDKhZLEyEG+\n7pv1iboLGHOt625MKacq7645kYHQvMjZEEbUCu6WrSKKk4ozONlLGuks61ldz+l1\n6INsUBTpHE5+BFVx2Vx0FYgTzJTAyq9bvayzCc3zAoGBAL/e7dLETIEVl6vAj7h6\nZ68KdYvOu+J2CsZwiS0ikp4akc4k92Qmg2AJ8Z+ymF8arWufnBGK/YJI0dLdszgP\nOVu5wZqlqJClzE+RpXGOyjUOxs2arzd6GY0fI9DzCHlqWKAF2uqcz7u/V/zttii7\nIb18vTYpURrN7XHpThqpV6ir\n-----END PRIVATE KEY-----\n",
+  "client_email": "piotr-764@smart-altar-274709.iam.gserviceaccount.com",
+  "client_id": "115422743895437888091",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/piotr-764%40smart-altar-274709.iam.gserviceaccount.com"
+}
