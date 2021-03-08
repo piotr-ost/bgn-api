@@ -26,7 +26,7 @@ def replace_and_translate(img, points, text, translator):
     translated = translator.translate(text)['translatedText']
     print(x1, y1, x2, y2, translated)
     cv2.putText(img, translated, org=(x1, y2), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-                color=(0, 0, 0), fontScale=1) # not sure if font size
+                color=(0, 0, 0), fontScale=0.5) # not sure if font size
     return img 
 
 
