@@ -3,16 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <title>Charge PDF Converter</title>
+  <style>
+/* body {background-color:linear-gradient(0deg, rgba(16,55,250,1) 0%, rgba(255,87,87,1) 100%);} */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: linear-gradient(0deg, rgba(16,55,250,1) 0%, rgba(255,87,87,1) 100%);
+	color: #333;
+	font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 260px;
+	border-radius: 3px;
+	box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.2);
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+
+.title {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #999;
+	text-align: center;
+}
+
+h1 {
+	font-size: 16px;
+	font-weight: 300;
+	color: #666;
+}
+
+.dropzone {
+	width: 100px;
+	height: 80px;
+	border: 1px dashed #999;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.upload-icon {
+	margin: 10px 2px 2px 2px;
+}
+
+.upload-input {
+	position: relative;
+	top: -62px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.btn {
+  float: center;
+  /* color: #f2f2f2; */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #fff;
+  background: rgba(255,87,87,1);
+	border: 0;
+	/* border-radius: 3px 12px 12px; */
+}
+
+.btn:hover {
+	background: rebeccapurple;
+	/* box-shadow: 0 3px 0 0 deeppink; */
+}
+
+  </style>
 </head>
 <body>
-  <div>
-    <h1>Upload PDF</h1>
-    <form method=post enctype=multipart/form-data>
-      <p>
-        <input type=file name=file>
-        <input type=submit value=Upload>
-      </p>
-    </form>
+
+  <div class="frame">
+    <div class="center">
+      <div class="title">
+        <h1>Drop file to translate</h1>
+      </div>
+      <!-- <div class="dropzone"> -->
+        <img src="/static/logo.jpg" height=120 width=120 class="upload-icon" />
+      <!-- </div> -->
+      <form method=post enctype=multipart/form-data>
+        <p>
+          <input type=file name=file>
+          <input class="btn" type=submit value=Upload>
+        </p>
+      </form>
+    </div>
   </div>
+  
+  <script>
+    function uploadPDF()
+    {
+    alert('Button Clcked');
+    }
+  </script>
+  
 </body>
 </html>
