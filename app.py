@@ -22,9 +22,9 @@ def replace_and_translate(img, points, text, translator):
     x2 = int(x2)
     y1 = int(y1)
     y2 = int(y2)
-    print(x1, y1, x2, y2, img.shape)
     cv2.rectangle(img, (x1, y1), (x2, y2), (255, 255, 255), -1)
     translated = translator.translate(text)['translatedText']
+    print(x1, y1, x2, y2, translated)
     cv2.putText(img, translated, org=(x1, y2), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
                 color=(0, 0, 0), fontScale=1) # not sure if font size
     return img 
@@ -69,7 +69,7 @@ def translate(filename):
     for points, text, confidence in res:
         img = replace_and_translate(img, points, text, translator)
     name = filename.split('.')[0]
-    filename = name + '_translated.pdf' 
+    filename = name + '_translated_.pdf' 
     as_pil = Image.fromarray(img)
     as_pil.save('static/' + filename)
     return render_template('translate.html', filename=filename)
