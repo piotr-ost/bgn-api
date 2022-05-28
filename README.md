@@ -1,2 +1,2 @@
 # bgn-api
-Google BGN Hackathon submission
+Google BGN Hackathon submission.
